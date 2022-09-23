@@ -16,7 +16,7 @@ import Content from "@/components/layout/Content.vue";
 @Component({
   components: {Content},
 })
-export default class Home extends Vue {
+export default class NotFoundPage extends Vue {
   private notFoundTitle = "404: Ops...página não foi localizada."
 }
 </script>
