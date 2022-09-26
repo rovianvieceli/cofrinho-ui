@@ -1,8 +1,8 @@
 <template>
   <div id="content">
-    <v-row>
+    <v-row dense>
       <v-col v-if="titulo" cols="12">
-        <p class="heading title">{{ titulo }}</p>
+        <p class="headline font-weight-light title-page">{{ titulo }}</p>
       </v-col>
       <v-col cols="12">
         <slot/>
