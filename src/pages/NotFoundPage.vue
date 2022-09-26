@@ -11,12 +11,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Content from "@/components/layout/Content.vue";
 
 @Component({
-  components: {Content},
+  components: {Content: () => import('@/components/layout/Content.vue')},
 })
-export default class Home extends Vue {
+export default class NotFoundPage extends Vue {
   private notFoundTitle = "404: Ops...página não foi localizada."
 }
 </script>

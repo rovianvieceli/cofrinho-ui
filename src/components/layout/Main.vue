@@ -1,5 +1,6 @@
 <template>
-  <v-app>
+  <v-app id="main">
+    <Menu/>
     <v-main>
       <v-container id="main-container" fluid>
         <slot/>
@@ -18,7 +19,9 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
-  components: {}
+  components: {
+    Menu: () => import('@/components/layout/Menu.vue')
+  }
 })
 export default class Main extends Vue {
   private snackbar = false
