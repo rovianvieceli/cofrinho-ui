@@ -1,15 +1,16 @@
 <template>
   <div id="home">
-    <Dashboard/>
+    <InOut/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import Dashboard from "@/components/home/Dashboard.vue";
 
 @Component({
-  components: {Dashboard},
+  components: {
+    InOut: () => import('@/components/dashboard/InOut.vue')
+  },
 })
 export default class Home extends Vue {
 }
